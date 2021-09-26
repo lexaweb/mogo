@@ -1,0 +1,32 @@
+body {
+  .header {
+    padding: 28px 0;
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    a {
+      color: $white;
+    }
+    &__logo {
+      a {
+        font: 700 30px/1.2 $Montserrat;
+      }
+    }
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      width: 52%;
+    }
+    &__item {
+      a {
+        font: 400 14px/1.2 $Montserrat;
+        text-transform: uppercase;
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}

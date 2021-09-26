@@ -1,0 +1,22 @@
+-
+  var headermenu =[
+    { link: '/', name: 'About'},
+    { link: '/', name: 'service'},
+    { link: '/', name: 'work'},
+    { link: '/', name: 'blog'},
+    { link: '/', name: 'contact'}
+  ]
+header.header
+  .inner
+    .header__logo
+      a(href='/') MoGo
+    .header__menu
+      each headermenuitem in headermenu
+        .header__item
+          a(href=headermenuitem.link)=headermenuitem.name
+      .header__icon
+        a(href='/')
+          img(src='/img/icon_basket.png', alt="basket")
+      .header__icon
+        a(href='/')
+          img(src='/img/icon_search.png', alt="search")
