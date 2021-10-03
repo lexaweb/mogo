@@ -1,3 +1,20 @@
+@keyframes line {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes line_progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 body {
   .wrapper {
     main {
@@ -6,7 +23,7 @@ body {
           display: flex;
           justify-content: center;
           width: 100%;
-          height: 1000px;
+          height: auto;
           margin-top: -92px;
           padding-top: 229px;
           background: url('../img/img1.png') no-repeat center/cover;
@@ -48,6 +65,74 @@ body {
               text-transform: uppercase;
               border: 3px solid $white;
               color: $white;
+              &:hover {
+                color: $mint;
+                background: $white;
+              }
+            }
+          }
+        }
+        .seconds {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 28px;
+          &__item {
+            width: calc((96% - 30px) / 4);
+            &:nth-child(1) {
+              .seconds__line_progress_active {
+                animation-name: line_progress;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+              }
+            }
+            &:nth-child(2) {
+              .seconds__line_progress_active {
+                animation-name: line_progress;
+                animation-duration: 3s;
+                animation-delay: 3s;
+                animation-fill-mode: forwards;
+              }
+            }
+            &:nth-child(3) {
+              .seconds__line_progress_active {
+                animation-name: line_progress;
+                animation-duration: 3s;
+                animation-delay: 6s;
+                animation-fill-mode: forwards;
+              }
+            }
+            &:nth-child(4) {
+              .seconds__line_progress_active {
+                animation-name: line_progress;
+                animation-duration: 3s;
+                animation-delay: 9s;
+                animation-fill-mode: forwards;
+              }
+            }
+          }
+          &__line {
+            width: 100%;
+            height: 3px;
+            margin-bottom: 25px;
+            background: $white;
+            animation-name: line;
+            animation-duration: 3s;
+            &_progress {
+              width: 0;
+              height: 3px;
+              background: $red;
+              &_active {
+                width: 0;
+              }
+            }
+          }
+          &__name {
+            color: $white;
+            font: 400 18px/1.2 $Montserrat;
+            text-transform: uppercase;
+            span {
+              margin-right: 5px;
+              font: 700 24px/1.2 $Montserrat;
             }
           }
         }

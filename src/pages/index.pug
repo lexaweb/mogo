@@ -3,6 +3,14 @@ extends layouts/layout
 block variables
   -const pageTitle ='Main'
 
+  -
+    var secondslist =[
+      { number: '01', name: 'Intro' },
+      { number: '02', name: 'Work' },
+      { number: '03', name: 'About' },
+      { number: '04', name: 'Contacts' }
+    ]
+
 block content
   main
     .main-page
@@ -13,3 +21,11 @@ block content
             .top-slider__title Welcome to MoGo
             .top-slider__button
               a(href='/') Learn more
+          .seconds
+            each secondslistItem in secondslist
+              .seconds__item
+                .seconds__line
+                  .seconds__line_progress
+                .seconds__name
+                  span=secondslistItem.number
+                  !=secondslistItem.name
