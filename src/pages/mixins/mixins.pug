@@ -17,9 +17,15 @@ mixin pageTitle(pageTitle)
   .page_title
     h1=pageTitle
 
-mixin sectionTitle(sectionTitle)
-  .section_title
-    h2=sectionTitle
+mixin sectionTitle(sectionDescr, sectionTitle)
+  .section
+    .section__descr=sectionDescr
+    .section__title
+      h2=sectionTitle
+
+mixin sectionText(sectionText)
+  .section
+    .section__text=sectionText
 
 mixin ui-button(text, color, submit, href)
   if submit

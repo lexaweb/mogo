@@ -10,6 +10,12 @@ block variables
       { number: '03', name: 'About' },
       { number: '04', name: 'Contacts' }
     ]
+  -
+    var storylist =[
+      { img: 'img/img2.png', alt: 'img2'},
+      { img: 'img/img3.png', alt: 'img3'},
+      { img: 'img/img4.png', alt: 'img4'},
+    ]
 
 block content
   main
@@ -29,3 +35,16 @@ block content
                 .seconds__name
                   span=secondslistItem.number
                   !=secondslistItem.name
+      section.story
+        .inner
+          +sectionTitle('What we do', 'Story about us')
+          +sectionText('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+          .story__list
+            each storylistItem in storylist
+              .story__item
+                a(href="/")
+                  img(src=storylistItem.img, alt=storylistItem.alt)
+                  .story__inf
+                    .story__icon
+                      img(src="img/icon_user.png", alt="user")
+                    .story__descr super team
