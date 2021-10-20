@@ -208,6 +208,31 @@ body {
             text-transform: uppercase;
           }
         }
+        .numbers {
+          background: $mint;
+          &__list {
+            display: flex;
+          }
+          &__item {
+            width: calc(100% / 5);
+            align-self: center;
+            padding: 80px 0 80px;
+            color: $white;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            text-transform: uppercase;
+            &:last-child {
+              border-right: 1px solid rgba(255, 255, 255, 0.3);
+            }
+          }
+          &__num {
+            margin-bottom: 30px;
+            font: 700 72px/1 $Montserrat;
+          }
+          &__text {
+            font: 400 14px/1.2 $Montserrat;
+          }
+        }
       }
     }
   }

@@ -142,14 +142,15 @@ body {
           margin-bottom: inherit;
           font: inherit;
         }
-        &__text {
-          width: 83%;
-          margin: 0 auto;
-          margin-bottom: 92px;
-          font: 400 15px/24px $Roboto;
-          text-align: center;
-          color: $grey;
-        }
+      }
+      .text {
+        width: 83%;
+        margin: 0 auto;
+        margin-top: -50px;
+        margin-bottom: 92px;
+        font: 400 15px/24px $Roboto;
+        text-align: center;
+        color: $grey;
       }
     }
   }

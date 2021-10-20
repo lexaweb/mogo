@@ -16,6 +16,14 @@ block variables
       { img: 'img/img3.png', alt: 'img3'},
       { img: 'img/img4.png', alt: 'img4'},
     ]
+  -
+    var numberslist =[
+      { num: '42', text: 'Web Design Projects'},
+      { num: '123', text: 'happy client'},
+      { num: '15', text: 'award winner'},
+      { num: '99', text: 'cup of coffee'},
+      { num: '24', text: 'members'}
+    ]
 
 block content
   main
@@ -48,3 +56,13 @@ block content
                     .story__icon
                       img(src="img/icon_user.png", alt="user")
                     .story__descr super team
+      section.numbers
+        .inner
+          .numbers__list
+            each numberslistItem in numberslist
+              .numbers__item 
+                .numbers__num=numberslistItem.num
+                .numbers__text=numberslistItem.text
+      section.services 
+        .inner 
+          +sectionTitle('We work with', 'Amazing Services')
