@@ -14,7 +14,7 @@ block variables
     var storylist =[
       { img: 'img/img2.png', alt: 'img2'},
       { img: 'img/img3.png', alt: 'img3'},
-      { img: 'img/img4.png', alt: 'img4'},
+      { img: 'img/img4.png', alt: 'img4'}
     ]
   -
     var numberslist =[
@@ -23,6 +23,15 @@ block variables
       { num: '15', text: 'award winner'},
       { num: '99', text: 'cup of coffee'},
       { num: '24', text: 'members'}
+    ]
+  -
+    var serviceslist =[
+      { img: 'img/icon_alarm.png', alt: 'icon_alarm', title: 'Photography', descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+      { img: 'img/icon_line_graph.png', alt: 'icon_line_graph', title: 'Web Design', descr: 'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+      { img: 'img/icon_computer.png', alt: 'icon_computer', title: 'Creativity', descr: 'Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'},
+      { img: 'img/icon_book.png', alt: 'icon_book', title: 'seo', descr: 'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'},
+      { img: 'img/icon_home.png', alt: 'icon_home', title: 'Css/Html', descr: 'Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.'},
+      { img: 'img/icon_border.png', alt: 'icon_border', title: 'digital', descr: 'Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'}
     ]
 
 block content
@@ -65,4 +74,12 @@ block content
                 .numbers__text=numberslistItem.text
       section.services 
         .inner 
-          +sectionTitle('We work with', 'Amazing Services')
+          +sectionTitle('We work with', 'Amazing Services ')
+          .services__list 
+            each serviceslistItem in serviceslist
+              .services__item 
+                .services__img 
+                  img(src=serviceslistItem.img, alt=serviceslistItem.alt)
+                .services__text 
+                  .services__title=serviceslistItem.title 
+                  .services__descr=serviceslistItem.descr
