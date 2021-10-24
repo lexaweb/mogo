@@ -33,6 +33,12 @@ block variables
       { img: 'img/icon_home.png', alt: 'icon_home', title: 'Css/Html', descr: 'Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.'},
       { img: 'img/icon_border.png', alt: 'icon_border', title: 'digital', descr: 'Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'}
     ]
+  -
+    var whatlist =[
+      { img: 'img/icon_picture.png', alt: 'icon_picture', title: 'Photography', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'},
+      { img: 'img/icon_equalizer.png', alt: 'icon_equalizer', title: 'creativity', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'},
+      { img: 'img/icon_bullseye.png', alt: 'icon_bullseye', title: 'web design', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
+    ]
 
 block content
   main
@@ -74,7 +80,7 @@ block content
                 .numbers__text=numberslistItem.text
       section.services 
         .inner 
-          +sectionTitle('We work with', 'Amazing Services ')
+          +sectionTitle('We work with', 'Amazing Services')
           .services__list 
             each serviceslistItem in serviceslist
               .services__item 
@@ -83,3 +89,23 @@ block content
                 .services__text 
                   .services__title=serviceslistItem.title 
                   .services__descr=serviceslistItem.descr
+      section.unique
+        .inner 
+          +sectionTitle('For all devices', 'Unique design')
+          .unique__img 
+            img(src="img/img6.png", alt="img6 ")
+      section.what
+        .inner 
+          +sectionTitle('Service', 'what we do')
+          +sectionText('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
+          .what__list
+            .what__img  
+              img(src="img/img10.png", alt="img10")
+            .what__list-tab 
+              each whatlistItem in whatlist
+                .what__item 
+                  .what__title
+                    img(src=whatlistItem.img, alt=whatlistItem.alt)
+                    !=whatlistItem.title
+                  .what__text
+                    p=whatlistItem.text

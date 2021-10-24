@@ -13,6 +13,7 @@ $(function () {
   // inputMask()
   // sliderInit ()
   animationInit ();
+  tabInit ();
 })
 
 
@@ -47,4 +48,13 @@ $(window).scroll(function() {
     $('.seconds__line_progress').addClass("seconds__line_progress_active");
   }
 });
+}
+
+function tabInit () {
+  $('.what__item').first().find('.what__text').show();
+  $('.what__title').on ('click', function () {
+    $('.what__text').slideUp()
+    $(this).next().slideDown()
+    $(this).toggleClass('what__title_active')
+  })
 }
