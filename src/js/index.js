@@ -54,7 +54,8 @@ function tabInit () {
   $('.what__item').first().find('.what__text').show();
   $('.what__title').on ('click', function () {
     $('.what__text').slideUp()
-    $(this).next().slideDown()
-    $(this).toggleClass('what__title_active')
+    $('.what__title').removeClass('what__title_active')
+    $(this).next().stop().stop().slideDown()
+    $(this).addClass('what__title_active')
   })
 }
