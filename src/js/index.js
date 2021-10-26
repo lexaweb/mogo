@@ -12,8 +12,9 @@ import './_backend'
 $(function () {
   // inputMask()
   // sliderInit ()
-  animationInit ();
-  tabInit ();
+  animationInit ()
+  tabInit ()
+  sliderInit()
 })
 
 
@@ -26,20 +27,16 @@ $(function () {
 // }
 
 
-// function sliderInit() {
-//   const swiperSlider = new Swiper('.swiper-container', {
-//     speed: 400,
-//     spaceBetween: 100,
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'bullets'
-//     },
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev'
-//     }
-//   })
-// }
+function sliderInit() {
+  const swiperSlider = new Swiper('.comment-icon__list', {
+    speed: 400,
+    spaceBetween: 100,
+    navigation: {
+      nextEl: '.comment-icon-button-next',
+      prevEl: '.comment-button-prev'
+    }
+  })
+}
 
 function animationInit () {
   var heightLine = $('.top-slider__title').offset().top
