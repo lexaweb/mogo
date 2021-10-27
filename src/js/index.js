@@ -33,7 +33,7 @@ function sliderInit() {
     spaceBetween: 100,
     navigation: {
       nextEl: '.comment-icon-button-next',
-      prevEl: '.comment-button-prev'
+      prevEl: '.comment-icon-button-prev'
     }
   })
 }

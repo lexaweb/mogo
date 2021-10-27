@@ -364,7 +364,70 @@ body {
             }
           }
         }
-        .comment-icon
+        .comment-icon {
+          background: #f8f8f8;
+          .inner {
+            position: relative;
+          }
+          &__list {
+            width: 88%;
+            padding: 70px 0;
+            margin: 0 auto;
+            overflow: hidden;
+          }
+          &__item {
+            display: flex;
+          }
+          &__icon {
+            margin-right: 60px;
+            padding: 45px;
+            border: 3px solid $mint;
+            img {
+              min-width: 63px;
+            }
+          }
+          &__comment {
+            margin-bottom: 23px;
+            font: 300 24px/36px $Roboto;
+            font-style: italic;
+            color: $grey;
+          }
+          &__name {
+            position: relative;
+            padding-left: 70px;
+            font: 400 24px/1.2 $KaushanScript;
+            color: $black;
+            &::after {
+              position: absolute;
+              content: '';
+              top: 50%;
+              left: 0;
+              width: 60px;
+              height: 3px;
+              background: $red;
+              transform: translateY(-50%);
+            }
+          }
+          &-button-next,
+          &-button-prev {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 22px;
+            height: 12px;
+            background: url('../img/icon_arrow.png') no-repeat center/cover;
+            transform: rotate(90deg) translateY(-50%);
+            cursor: pointer;
+          }
+          &-button-prev {
+            left: 0;
+            right: unset;
+            transform: rotate(-90deg);
+          }
+          .swiper-button-disabled {
+            opacity: 0.7;
+          }
+        }
       }
     }
   }
