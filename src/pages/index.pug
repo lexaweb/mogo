@@ -39,6 +39,12 @@ block variables
       { img: 'img/icon_equalizer.png', alt: 'icon_equalizer', title: 'creativity', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'},
       { img: 'img/icon_bullseye.png', alt: 'icon_bullseye', title: 'web design', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
     ]
+  -
+    var meetlist =[
+      { img: 'img/img11.png', alt: 'img11', fblink: '/', fbicon: 'icon_fb', twitterlink: '/', twittericon: 'icon_twitter', pinterestlink: '/', pinteresticon: 'icon_pinterest',  imlink: '', imicon: 'icon_im', text: 'Matthew Dix', descr: 'Graphic Design'},
+      { img: 'img/img12.png', alt: 'img12', fblink: '/', fbicon: 'icon_fb', twitterlink: '/', twittericon: 'icon_twitter', pinterestlink: '/', pinteresticon: 'icon_pinterest',  imlink: '', imicon: 'icon_im', text: 'Christopher Campbell', descr: 'Branding/UX design'},
+      { img: 'img/img13.png', alt: 'img13', fblink: '/', fbicon: 'icon_fb', twitterlink: '/', twittericon: 'icon_twitter', pinterestlink: '/', pinteresticon: 'icon_pinterest',  imlink: '', imicon: 'icon_im', text: 'Michael Fertig', descr: 'Developer'}
+    ]
 
 block content
   main
@@ -141,4 +147,19 @@ block content
           +sectionTitle('Who we are', 'Meet our team')
           +sectionText('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
           .meet__list 
-            .meet__item 
+            each meetlistItem in meetlist
+              .meet__item 
+                .meet__hov-img
+                  .meet__img 
+                    img(src=meetlistItem.img, alt=meetlistItem.alt)
+                    .meet__icon 
+                      a(href=meetlistItem.fblink) 
+                        +icon(meetlistItem.fbicon)
+                      a(href=meetlistItem.twitterlink) 
+                        +icon(meetlistItem.twittericon)
+                      a(href=meetlistItem.pinterestlink) 
+                        +icon(meetlistItem.pinteresticon)
+                      a(href=meetlistItem.imlink) 
+                        +icon(meetlistItem.imicon)
+                .meet__text=meetlistItem.text
+                .meet__descr=meetlistItem.descr
