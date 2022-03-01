@@ -37,6 +37,19 @@ function sliderInit() {
     }
   })
 }
+const swiperSlider = new Swiper('.creatively-slider__list', {
+  speed: 400,
+  spaceBetween: 10,
+  // loop: true,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
+  navigation: {
+    nextEl: '.creatively-slider-button-next',
+    prevEl: '.creatively-slider-button-prev'
+  }
+})
 
 function animationInit () {
   var heightLine = $('.top-slider__title').offset().top

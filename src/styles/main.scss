@@ -533,7 +533,7 @@ body {
           &__item {
             position: relative;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.3s;  
             &:hover {
               &::before {
                 opacity: 1;
@@ -579,6 +579,200 @@ body {
           }
           &__descr {
             font: italic 300 15px/24px $Roboto;
+          }
+        }
+        .creatively-slider {
+          .inner {
+            position: relative;
+          }
+          &__list {
+            position: relative;
+            overflow: hidden;
+          }
+          &__item {
+            display: flex;
+            align-items: center;
+          }
+          &__img {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            border-radius: 50%;
+            img {
+              max-width: inherit;
+              height: 210px;
+            }
+          }
+          &__descr {
+            margin-bottom: 20px;
+            font: italic 300 24px/36px $Roboto;
+            color: $grey;
+          }
+          &__name {
+            position: relative;
+            padding-left: 70px;
+            font: 400 24px/1.2 $KaushanScript;
+            color: $black;
+            &::after {
+              position: absolute;
+              content: '';
+              top: 50%;
+              left: 0;
+              width: 60px;
+              height: 3px;
+              background: $red;
+              transform: translateY(-50%);
+            }
+          }
+          &-button-next,
+          &-button-prev {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            right: -50px;
+            width: 22px;
+            height: 12px;
+            background: url('../img/icon_arrow.png') no-repeat center/cover;
+            transform: rotate(90deg) translateY(-50%);
+            cursor: pointer;
+          }
+          &-button-prev {
+            left: -50px;
+            right: unset;
+            transform: rotate(-90deg);
+          }
+          .swiper-button-disabled {
+            opacity: 0.7;
+          }
+        }
+        .happy {
+          position: relative;
+          padding: 100px 0 100px;
+          &::after {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../img/img36.png) no-repeat center/cover;
+            opacity: 0.15;
+          }
+          &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 85px;
+            grid-row-gap: 70px;
+          }
+          &__item {
+            display: flex;
+          }
+          &__img {
+            margin-right: 30px;
+            border-radius: 50%;
+            img {
+              max-width: 110px;
+              height: 110px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+          &__name {
+            margin-bottom: 15px;
+            font: 700 14px/1.2 $Montserrat;
+            text-transform: uppercase;
+            color: $black;
+          }
+          &__descr {
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            font: italic 300 15px/24px $Roboto;
+            color: $black;
+            &::before {
+              position: absolute;
+              content: '';
+              left: 0;
+              bottom: 0;
+              width: 60px;
+              height: 3px;
+              background: $red;
+            }
+          }
+          &__text {
+            font: 400 15px/24px $Roboto;
+            color: $grey;
+          }
+        }
+        .stories {
+          &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 30px;
+            grid-row-gap: 30px
+          }
+          &__img {
+            position: relative;
+            margin-bottom: 20px;
+          }
+          &__date {
+            position: absolute;
+            left: -10px;
+            bottom: 10px;
+            display: inline-block;
+            max-width: 60px;
+            padding: 15px;
+            background: $mint;
+            text-align: center;
+            color: $white;
+          }
+          &__number-date {
+            font: 700 30px/1.2 $Montserrat;
+          }
+          &__descr-date {
+            font: italic 300 15px/1.2 $Montserrat;
+          }
+          &__title {
+            margin-bottom: 20px;
+            font: 700 14px/1.2 $Montserrat;
+            text-transform: uppercase;
+            color: $black;
+          }
+          &__text {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e5e5e5;
+            font: 400 15px/24px $Roboto;
+            color: $grey;
+          }
+          &__inf {
+            display: flex;
+            align-items: center;
+          }
+          &__watch {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            font: italic 300 15px/24px $Roboto;
+            color: $grey;
+            img {
+              width: 20px;
+              height: 12px;
+              margin-right: 7px;
+            }
+          }
+          &__comment {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            font: italic 300 15px/24px $Roboto;
+            color: $grey;
+            img {
+              width: 16px;
+              height: 15px;
+              margin-right: 7px;
+            }
           }
         }
       }

@@ -5,7 +5,7 @@ const dependents = require('gulp-dependents')
 const pugLinter = require('gulp-pug-linter')
 const filter = require('gulp-filter')
 const pug = require('gulp-pug')
-const htmlValidator = require('gulp-w3c-html-validator')
+// const htmlValidator = require('gulp-w3c-html-validator')
 const browsersync = require('browser-sync')
 
 module.exports = function pug2html() {
@@ -21,7 +21,7 @@ module.exports = function pug2html() {
     .pipe(pugLinter({ reporter: 'default' }))
     .pipe(filter('src/pages/*.pug'))
     .pipe(pug({ pretty: true }))
-    .pipe(htmlValidator())
+    // .pipe(htmlValidator())
     .pipe(gulp.dest('build'))
     .pipe(browsersync.stream())
 }

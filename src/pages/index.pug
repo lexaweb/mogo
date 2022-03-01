@@ -45,6 +45,13 @@ block variables
       { img: 'img/img12.png', alt: 'img12', fblink: '/', fbicon: 'icon_fb', twitterlink: '/', twittericon: 'icon_twitter', pinterestlink: '/', pinteresticon: 'icon_pinterest',  imlink: '', imicon: 'icon_im', text: 'Christopher Campbell', descr: 'Branding/UX design'},
       { img: 'img/img13.png', alt: 'img13', fblink: '/', fbicon: 'icon_fb', twitterlink: '/', twittericon: 'icon_twitter', pinterestlink: '/', pinteresticon: 'icon_pinterest',  imlink: '', imicon: 'icon_im', text: 'Michael Fertig', descr: 'Developer'}
     ]
+  -
+    var happylist =[
+      {img: 'img/img39.png', alt: 'img', name: 'Matthew Dix', descr: 'Graphic Design', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'},
+      {img: 'img/img40.png', alt: 'img', name: 'Nick Karvounis', descr: 'Graphic Design', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'},
+      {img: 'img/img41.png', alt: 'img', name: 'Jaelynn Castillo', descr: 'Graphic Design', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'},
+      {img: 'img/img42.png', alt: 'img', name: 'Mike Petrucci', descr: 'Graphic Design', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'}
+    ]
 
 block content
   main
@@ -223,3 +230,84 @@ block content
                 img(src="img/icon_picture_white.png", alt="icon_picture_white")
                 .creatively__title creatively designed
                 .creatively__descr Lorem ipsum dolor sit
+      section.creatively-slider 
+        .inner
+          .creatively-slider__list
+            .swiper-wrapper 
+              .swiper-slide 
+                .creatively-slider__item 
+                  .creatively-slider__img 
+                    img(src="img/img14.png", alt="img14.png")
+                  .creatively-slider__text
+                    .creatively-slider__descr “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                    .creatively-slider__name Joshua Earle
+              .swiper-slide 
+                .creatively-slider__item 
+                  .creatively-slider__img 
+                    img(src="img/img14.png", alt="img14.png")
+                  .creatively-slider__text
+                    .creatively-slider__descr “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                    .creatively-slider__name Joshua Earle
+          .creatively-slider-button-next
+          .creatively-slider-button-prev
+      section.happy 
+        .inner
+          +sectionTitle('Happy Clients', 'What people say')
+          .happy__list 
+            each happylistItem in happylist
+              .happy__item 
+                .happy__img 
+                  img(src=happylistItem.img, alt=happylistItem.alt)
+                .happy__inf 
+                  .happy__name=happylistItem.name
+                  .happy__descr=happylistItem.descr
+                  .happy__text=happylistItem.text
+      section.stories
+        .inner 
+          +sectionTitle('Our stories', 'Latest blog')
+          .stories__list 
+            .stories__item 
+              .stories__img 
+                img(src="img/img15.png", alt="img")
+                .stories__date 
+                  .stories__number-date 15
+                  .stories__descr-date Jan 
+              .stories__title Lorem ipsum dolor sit amet
+              .stories__text Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              .stories__inf 
+                .stories__watch 
+                  img(src="img/icon_view.png", alt="icon")
+                  | 542
+                .stories__comment 
+                  img(src="img/icon_speech_bubble.png", alt="icon")
+                  | 17
+            .stories__item 
+              .stories__img 
+                img(src="img/img15.png", alt="img")
+                .stories__date 
+                  .stories__number-date 15
+                  .stories__descr-date Jan 
+              .stories__title Lorem ipsum dolor sit amet
+              .stories__text Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              .stories__inf 
+                .stories__watch 
+                  img(src="img/icon_view.png", alt="icon")
+                  | 542
+                .stories__comment 
+                  img(src="img/icon_speech_bubble.png", alt="icon")
+                  | 17
+            .stories__item 
+              .stories__img 
+                img(src="img/img15.png", alt="img")
+                .stories__date 
+                  .stories__number-date 15
+                  .stories__descr-date Jan 
+              .stories__title Lorem ipsum dolor sit amet
+              .stories__text Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              .stories__inf 
+                .stories__watch 
+                  img(src="img/icon_view.png", alt="icon")
+                  | 542
+                .stories__comment 
+                  img(src="img/icon_speech_bubble.png", alt="icon")
+                  | 17
