@@ -1,28 +1,153 @@
 body {
   .footer {
-    padding: 20px 0;
-    .inner {
+    &__list {
       display: flex;
       justify-content: space-between;
+      padding-bottom: 70px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #e5e5e5;
     }
-    &-logo {
+    &__left {
+      width: 39%;
+    }
+    &__center {
+      width: 30%;
+    }
+    &__right {
+      width: 22%;
+    }
+    &__logo {
+      margin-bottom: 40px;
       a {
-        width: 220px;
-        height: 50px;
-        @include media-laptop {
-          width: 170px;
-          height: 40px;
+        font: 700 46px/1.2 $Montserrat;
+        color: #cccccc;
+      }
+    }
+    &__text {
+      margin-bottom: 50px;
+      font: 400 15px/24px $Roboto;
+      color: $grey;
+    }
+    &__followers {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      font: 400 14px/1.2 $Montserrat;
+      color: $black;
+      border-bottom: 1px solid #e5e5e5;
+      span {
+        font-weight: 700;
+      }
+    }
+    &__social {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    &__social-title {
+      margin-right: 23px;
+      font: italic 300 15px/24px $Roboto;
+      color: $grey;
+    }
+    &__social-list {
+      display: flex;
+      align-items: center;
+      a {
+        margin-right: 20px;
+        color: $mint;
+        &:last-child {
+          margin-right: 0;
         }
-        @include media-tablet {
-          width: 110px;
-          height: 25px;
+        &:hover {
+          opacity: 0.7;
+        }
+        svg {
+          width: 18px;
+          height: 18px;
         }
       }
     }
-    &-menu {
+    &__email {
       display: flex;
-      justify-content: space-between;
-      width: 50%;
+      align-items: center;
+      input {
+        padding: 10px 15px;
+        width: 230px;
+        font: italic 300 15px/1 $Roboto;
+        color: #ccc;
+        border: 1px solid #e7e7e7;
+        background: $white;
+        &::placeholder {
+          font: italic 300 15px/1 $Roboto;
+          color: #ccc;
+        }
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        padding: 13px;
+        font: 700 14px/1 $Montserrat;
+        text-transform: uppercase;
+        color: $white;
+        border: none;
+        background: $mint;
+        transition: 0.3s;
+      }
+    }
+    &__title {
+      margin-bottom: 40px;
+      font: 700 14px/1.2 $Montserrat;
+      text-transform: uppercase;
+      color: $black;
+    }
+    &__blogs-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__blogs-img {
+      min-width: 120px;
+      margin-right: 20px;
+    }
+    &__blogs-descr {
+      margin-bottom: 12px;
+      font: 400 12px/18px $Montserrat;
+      text-transform: uppercase;
+      color: $black;
+    }
+    &__blogs-date {
+      font: italic 300 13px/24px $Roboto;
+      color: $grey;
+    }
+    &__ig-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 2px;
+      grid-row-gap: 2px;
+      margin-bottom: 20px;
+    }
+    &__ig-img  {
+      img {
+        width: 100%;
+      }
+    }
+    &__ig-descr {
+      font: italic 300 13px/24px $Roboto;
+      color: $black;
+    }
+    &__copyright {
+      margin-bottom: 22px;
+      font: 400 14px/1.2 $Montserrat;
+      color: $black;
+      text-align: center;
+      a {
+        display: inline-block;
+        color: $red;
+      }
     }
   }
 }
